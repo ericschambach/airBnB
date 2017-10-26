@@ -101,8 +101,8 @@ module.exports = function (app) {
     // app.post('/api/currentUser/listings/:id/newMessage', function(req, res))
 
     // Catch-all route
-    app.all('*', (req, res, next) => {
-        res.sendFile(path.resolve('./frontend/dist/index.html'));
-    })
+    // app.all('*', (req, res, next) => {
+    //     res.sendFile(path.resolve('./frontend/dist/index.html'));
+    // })
 
 }
