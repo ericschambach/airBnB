@@ -6,4 +6,7 @@
     <input type="text" placeholder="Search for Location" autocorrect="off" autocapitalize="off" spellcheck="off" class="form-control" #search>
   </div>
 </div>
+<div name='eat' *ngFor='let rest of restaurants'>
+  <h5>{{rest.name}}</h5>
+</div>
 <router-outlet></router-outlet>

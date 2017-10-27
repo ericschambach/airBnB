@@ -22,6 +22,7 @@ export class InnerSearchComponent implements OnInit {
   autocomplete.addListener("place_changed", () => {
     this.ngZone.run(() => {
       let place: google.maps.places.PlaceResult = autocomplete.getPlace();
+      // let htmlatr: google.maps.places.
       if(place.geometry === undefined || place.geometry === null ){
         return;
         }

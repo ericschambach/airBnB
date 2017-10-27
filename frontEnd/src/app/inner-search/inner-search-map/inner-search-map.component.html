@@ -1,3 +1,4 @@
+<!-- <script src="https://maps.googleapis.com/maps/api/js?libraries=visualization"></script> -->
 <div class="container">
   <h1>Your Location:</h1>
   <div class="form-group">
@@ -6,4 +7,14 @@
   <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
     <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
   </agm-map>
+    <div name='eat' *ngFor='let rest of restaurants'>
+      <!-- <div name='best' *ngIF='{{rest.rating}}'></div> -->
+      <img src="{{rest.photos[0].photo_reference}}" alt="">
+      <h2>{{rest.name}}</h2>
+      <!-- <h2>{{rest.photos[0].photo_reference}}</h2> -->
+      <h4>Address: {{rest.vicinity}}</h4>
+      <h4>Website: {{rest.website}}</h4>
+      <h4>Rating: {{rest.rating}}</h4>
+      <!-- <h4>Like: {{rest.photos[0].photo_reference}}</h4> -->
+    </div>
 </div>

@@ -61,7 +61,8 @@ module.exports = {
             user = req.session.currentUser;
             res.json(user);
         } else {
-            res.json({user: user});
+            //commented to avoid errors at my end (ERIC)
+            // res.json({user: currentUser});
         }
     }, 
 
